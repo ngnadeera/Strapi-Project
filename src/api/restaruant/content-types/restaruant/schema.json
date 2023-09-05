@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaruants",
+  "info": {
+    "singularName": "restaruant",
+    "pluralName": "restaruants",
+    "displayName": "Restaruant",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "openingHours": {
+      "displayName": "Opening Hours",
+      "type": "component",
+      "repeatable": false,
+      "component": "restarunt-info.opening-hours"
+    }
+  }
+}
